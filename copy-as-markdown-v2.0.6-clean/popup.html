@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy as Markdown - Settings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="settings-container">
+    <h1>Copy as Markdown</h1>
+    <p class="version">v1.0.0</p>
+    
+    <div class="settings-section">
+      <h2>General</h2>
+      
+      <div class="setting-item">
+        <label for="enabled">Enable Extension</label>
+        <input type="checkbox" id="enabled" data-setting="enabled">
+      </div>
+      
+      <div class="setting-item">
+        <label for="showNotification">Show Copy Notification</label>
+        <input type="checkbox" id="showNotification" data-setting="showNotification">
+      </div>
+    </div>
+    
+    <div class="settings-section">
+      <h2>Markdown Options</h2>
+      
+      <div class="setting-item">
+        <label for="convertLinks">Convert Links to [text](url)</label>
+        <input type="checkbox" id="convertLinks" data-setting="convertLinks">
+      </div>
+      
+      <div class="setting-item">
+        <label for="convertImages">Convert Images to ![alt](url)</label>
+        <input type="checkbox" id="convertImages" data-setting="convertImages">
+      </div>
+      
+      <div class="setting-item">
+        <label for="convertHeadings">Convert Headings to # Format</label>
+        <input type="checkbox" id="convertHeadings" data-setting="convertHeadings">
+      </div>
+      
+      <div class="setting-item">
+        <label for="preserveFormatting">Preserve Bold/Italic</label>
+        <input type="checkbox" id="preserveFormatting" data-setting="preserveFormatting">
+      </div>
+    </div>
+    
+    <div class="settings-section">
+      <button id="saveBtn" class="btn-primary">Save Settings</button>
+      <button id="resetBtn" class="btn-secondary">Reset to Defaults</button>
+    </div>
+    
+    <div id="status" class="status-message"></div>
+    
+    <div class="features-section">
+      <h3>✨ Unique Features</h3>
+      <ul class="feature-list">
+        <li>🔒 Privacy-first (open-source)</li>
+        <li>⚡ Lightweight (&lt;200 lines core)</li>
+        <li>🎯 Smart link detection</li>
+        <li>📝 Auto-heading conversion</li>
+      </ul>
+    </div>
+    
+    <div class="footer">
+      <p>
+        <a href="https://github.com/copy-as-markdown/extension" target="_blank">GitHub</a> • 
+        <a href="https://github.com/copy-as-markdown/extension/issues" target="_blank">Report Issue</a>
+      </p>
+    </div>
+  </div>
+  
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

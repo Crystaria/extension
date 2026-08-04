@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Copy as Markdown",
+  "version": "1.0.1",
+  "description": "Smart Markdown converter with batch copy, custom formats, and privacy-first design. Lightweight & open-source.",
+  "author": "Copy as Markdown Team",
+  "homepage_url": "https://github.com/copy-as-markdown/extension",
+  
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Copy as Markdown"
+  },
+  
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "options_page": "popup.html",
+  
+  "minimum_chrome_version": "88",
+  
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M",
+        "mac": "Command+Shift+M"
+      },
+      "description": "Open settings"
+    }
+  }
+}
