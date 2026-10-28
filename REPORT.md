@@ -306,9 +306,9 @@ REPORT.md / CHANGELOG.md / PRIVACY.md / README.md
 | --- | --- | --- |
 | 404 的 `homepage_url` / 隐私政策链接 | 立即修 | ✅ 已修：manifest、popup 页脚、PRIVACY.md、README 全部指向 `Crystaria/extension`；实测三个 URL 全部 **200** |
 | 图标为纯色占位图 | 不阻塞今日灰度 | ⏳ 沿用占位图，2.1.0 前替换（打包脚本已把 `icons/` 纳入白名单） |
-| LICENSE 缺失 | owner 补标准 AGPL-3.0 丢根目录 | ⏳ 待提交；README 已引用 `LICENSE` |
+| LICENSE 缺失 | owner 补标准 AGPL-3.0 丢根目录 | ✅ 已提交 `03267f6`：GNU 官方 `agpl-3.0.txt` 正文，34,523 字节，README 的 `LICENSE` 引用已生效 |
 | CI | 测试已入库 | ⏳ 待接 workflow（`cd tests && npm test`） |
-| `CLAUDE.md` 含内部路径 | 未在本次范围 | ⏳ 建议公开前删除或移出仓库 |
+| `CLAUDE.md` 含内部路径 | 公开前删除 | ✅ 已提交 `c29faeb` 删除，仓库内已无引用 |
 
 ## 合入后的最终验证快照
 
