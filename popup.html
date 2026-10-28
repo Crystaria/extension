@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy as Markdown - 设置</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="settings-container">
+    <h1>Copy as Markdown</h1>
+    <p class="version">v2.0.7</p>
+
+    <p class="hint">用法：在网页里选中内容 → 右键 → <strong>Copy as Markdown</strong></p>
+
+    <div class="settings-section">
+      <h2>通用</h2>
+
+      <div class="setting-item">
+        <label for="enabled">启用扩展</label>
+        <input type="checkbox" id="enabled" data-setting="enabled">
+      </div>
+
+      <div class="setting-item">
+        <label for="showNotification">复制后显示提示</label>
+        <input type="checkbox" id="showNotification" data-setting="showNotification">
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <h2>Markdown 选项</h2>
+
+      <div class="setting-item">
+        <label for="convertLinks">链接转成 [文字](网址)</label>
+        <input type="checkbox" id="convertLinks" data-setting="convertLinks">
+      </div>
+
+      <div class="setting-item">
+        <label for="convertImages">图片转成 ![描述](网址)</label>
+        <input type="checkbox" id="convertImages" data-setting="convertImages">
+      </div>
+
+      <div class="setting-item">
+        <label for="convertHeadings">标题转成 # 格式</label>
+        <input type="checkbox" id="convertHeadings" data-setting="convertHeadings">
+      </div>
+
+      <div class="setting-item">
+        <label for="preserveFormatting">保留加粗 / 斜体 / 删除线</label>
+        <input type="checkbox" id="preserveFormatting" data-setting="preserveFormatting">
+      </div>
+    </div>
+
+    <div class="settings-section">
+      <button id="saveBtn" class="btn-primary">保存设置</button>
+      <button id="resetBtn" class="btn-secondary">恢复默认</button>
+    </div>
+
+    <div id="status" class="status-message"></div>
+
+    <div class="features-section">
+      <h3>支持的结构</h3>
+      <ul class="feature-list">
+        <li>段落 / 换行 / 分割线</li>
+        <li>有序、无序、嵌套列表</li>
+        <li>代码块（带语言标记）与行内代码</li>
+        <li>引用、表格、链接、图片、加粗斜体</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p>
+        <a href="https://github.com/Crystaria/extension" target="_blank" rel="noreferrer">GitHub</a> •
+        <a href="https://github.com/Crystaria/extension/blob/main/PRIVACY.md" target="_blank" rel="noreferrer">Privacy</a> •
+        <a href="https://github.com/Crystaria/extension/issues" target="_blank" rel="noreferrer">Issues</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="popup.js" defer></script>
+</body>
+</html>

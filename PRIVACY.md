@@ -1,7 +1,8 @@
 # Privacy Policy - Copy as Markdown
 
-**Last Updated:** March 20, 2026  
-**Version:** 1.0
+**Last Updated:** October 28, 2026
+**Applies to:** version 2.0.7 and later
+**Contact:** https://github.com/Crystaria/extension/issues
 
 ---
 
@@ -9,112 +10,93 @@
 
 **Copy as Markdown does NOT collect, store, or transmit any user data.**
 
-Our extension operates entirely locally on your device. We do not:
-- Collect personal information
-- Track user behavior
-- Use analytics services
-- Transmit data to external servers
-- Display advertisements
+The extension operates entirely on your device. It does not:
+
+- collect personal information
+- track browsing behaviour
+- use analytics or crash-reporting services
+- send selections to any server
+- display advertisements
+- load remote code
+
+There are no network requests at all: no `fetch`, no `XMLHttpRequest`, no external scripts,
+no remote fonts.
 
 ---
 
 ## Permissions
 
-We use the following Chrome permissions, all for core functionality:
+The extension requests exactly four permissions, all for core functionality:
 
-### contextMenus
-- **Purpose:** Add "Copy as Markdown" option to right-click menu
-- **Usage:** Only active when text is selected
-- **Data Access:** None
+### `contextMenus`
 
-### storage
-- **Purpose:** Save your extension settings locally
-- **Usage:** Stores preferences (e.g., enable/disable link conversion)
-- **Data Access:** Local storage only, no external transmission
+- **Purpose:** add the "Copy as Markdown" item to the right-click menu
+- **Scope:** the menu item is only shown when text is selected
+- **Data access:** none
 
-### activeTab
-- **Purpose:** Access selected text on the current page
-- **Usage:** Only when you right-click and select "Copy as Markdown"
-- **Data Access:** Temporary access to selected text only
+### `storage`
 
-### scripting
-- **Purpose:** Inject conversion logic into web pages
-- **Usage:** Converts selected text to Markdown format
-- **Data Access:** Only processes selected text, no other page data
+- **Purpose:** remember your settings (enable/disable, link/image/heading conversion, notifications)
+- **Scope:** stored in `chrome.storage.sync`, so it may sync across your signed-in Chrome profile
+- **Data access:** the six booleans listed in the settings panel; no page content is stored
 
-### clipboardWrite
-- **Purpose:** Copy converted Markdown to clipboard
-- **Usage:** Only when you use the extension
-- **Data Access:** Write-only, no read access
+### `activeTab`
+
+- **Purpose:** read the current selection on the tab where you explicitly invoke the extension
+- **Scope:** temporary, granted per invocation; it is not a persistent host permission
+- **Data access:** the current tab only, and only after you click the menu item
+
+### `scripting`
+
+- **Purpose:** inject the converter into the current tab on demand
+- **Scope:** runs only after an explicit invocation, in the extension's isolated world
+- **Data access:** only the DOM needed to build the Markdown string of your selection
+
+The extension declares **no** `host_permissions` and registers **no** always-on content script,
+so it cannot read pages you never invoke it on.
 
 ---
 
 ## Data Processing
 
-**All data processing happens locally on your device.**
+All processing happens locally in your browser:
 
-When you use Copy as Markdown:
-1. You select text on a webpage
-2. The extension converts it to Markdown format
-3. The result is copied to your clipboard
-4. **No data leaves your device**
+1. You select text on a page.
+2. The extension injects its converter into that tab.
+3. The selection is serialised to Markdown in memory.
+4. The result is written to your clipboard.
+5. **Nothing leaves your device.**
 
-We do not:
-- Send selected text to any server
-- Store browsing history
-- Track which websites you visit
-- Log your usage patterns
+The extension does not keep a copy of the converted text, your clipboard history, the page title,
+the URL, or the time of use.
 
 ---
 
 ## Third-Party Services
 
-**We do NOT use any third-party services:**
-- No analytics (Google Analytics, etc.)
-- No advertising networks
-- No tracking scripts
-- No external APIs
+None. No analytics, no advertising networks, no tracking scripts, no external APIs.
 
 ---
 
 ## Children's Privacy
 
-Our extension does not knowingly collect any personal information from children. Since we do not collect any data at all, we do not target our services to children under 13 years of age.
+The extension collects no data from anyone, including children under 13.
 
 ---
 
 ## Changes to This Policy
 
-We may update this privacy policy from time to time. Any changes will be:
-- Posted on this page
-- Updated with a new "Last Updated" date
-- Reflected in the extension's Chrome Web Store listing
-
-We encourage you to review this privacy policy periodically.
-
----
-
-## Contact Us
-
-If you have any questions about this privacy policy, please contact us:
-
-- **GitHub:** https://github.com/copy-as-markdown/extension
-- **Issues:** https://github.com/copy-as-markdown/extension/issues
+Updates will be posted on this page with a new "Last Updated" date and reflected in the
+Chrome Web Store listing.
 
 ---
 
 ## Summary
 
-**In short:**
 - ✅ No data collection
-- ✅ No tracking
-- ✅ No analytics
-- ✅ No ads
+- ✅ No tracking, no analytics, no ads
+- ✅ No network requests
 - ✅ 100% local processing
-- ✅ Open-source and transparent
+- ✅ Open source
 
 **Your privacy is our priority.**
-
----
-
-*This privacy policy is designed to be simple, clear, and compliant with Chrome Web Store requirements.*

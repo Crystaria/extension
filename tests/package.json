@@ -1,0 +1,13 @@
+{
+  "name": "copy-as-markdown-tests",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Copy as Markdown 的转换器 / 后台脚本回归测试（不随扩展打包）",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0"
+  }
+}

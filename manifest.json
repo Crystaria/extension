@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Copy as Markdown",
+  "version": "2.0.7",
+  "description": "Select anything on a page, right-click copy, get clean Markdown (headings, lists, code, tables, links, images).",
+  "author": "Copy as Markdown Team",
+  "homepage_url": "https://github.com/Crystaria/extension",
+
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Copy as Markdown"
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "minimum_chrome_version": "102",
+
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M",
+        "mac": "Command+Shift+M"
+      },
+      "description": "Open settings"
+    }
+  }
+}
